@@ -1,4 +1,4 @@
-package main
+ï»¿package main
 
 import "fmt"
 
@@ -10,23 +10,23 @@ func f(from string) {
 
 func main() {
 
-	//¼ÙÉèÎÒÃÇÓÐÒ»¸öº¯Êý½Ð×ö f(s)¡£ÎÒÃÇÊ¹ÓÃÒ»°ãµÄ·½Ê½µ÷²¢Í¬Ê±ÔËÐÐ¡£
+	//å‡è®¾æˆ‘ä»¬æœ‰ä¸€ä¸ªå‡½æ•°å«åš f(s)ã€‚æˆ‘ä»¬ä½¿ç”¨ä¸€èˆ¬çš„æ–¹å¼è°ƒå¹¶åŒæ—¶è¿è¡Œã€‚
 
 	f("direct")
 
-	//Ê¹ÓÃ go f(s) ÔÚÒ»¸ö Go Ð­³ÌÖÐµ÷ÓÃÕâ¸öº¯Êý¡£Õâ¸öÐÂµÄ Go Ð­³Ì½«»á²¢ÐÐµÄÖ´ÐÐÕâ¸öº¯Êýµ÷ÓÃ¡£
+	//ä½¿ç”¨ go f(s) åœ¨ä¸€ä¸ª Go åç¨‹ä¸­è°ƒç”¨è¿™ä¸ªå‡½æ•°ã€‚è¿™ä¸ªæ–°çš„ Go åç¨‹å°†ä¼šå¹¶è¡Œçš„æ‰§è¡Œè¿™ä¸ªå‡½æ•°è°ƒç”¨ã€‚
 	fmt.Println("-----------------------")
 	go f("goroutine")
 
-	//ÄãÒ²¿ÉÒÔÎªÄäÃûº¯ÊýÆô¶¯Ò»¸ö Go Ð­³Ì¡£
+	//ä½ ä¹Ÿå¯ä»¥ä¸ºåŒ¿åå‡½æ•°å¯åŠ¨ä¸€ä¸ª Go åç¨‹ã€‚
 
 	go func(msg string) {
 		fmt.Println(msg)
 	}("going")
 
 	/*
-	   ÏÖÔÚÕâÁ½¸ö Go Ð­³ÌÔÚ¶ÀÁ¢µÄ Go Ð­³ÌÖÐÒì²½µÄÔËÐÐ£¬ËùÒÔÎÒÃÇÐèÒªµÈËüÃÇÖ´ÐÐ½áÊø¡£ÕâÀïµÄ Scanln ´úÂëÐèÒªÎÒÃÇÔÚ³ÌÐòÍË³öÇ°°´ÏÂÈÎÒâ¼ü½áÊø¡£
-	   µ±ÎÒÃÇÔËÐÐÕâ¸ö³ÌÐòÊ±£¬½«Ê×ÏÈ¿´µ½×èÈûÊ½µ÷ÓÃµÄÊä³ö£¬È»ºóÊÇÁ½¸ö Go Ð­³ÌµÄ½»ÌæÊä³ö¡£ÕâÖÖ½»ÌæµÄÇé¿ö±íÊ¾ Go ÔËÐÐÊ±ÊÇÒÔÒì²½µÄ·½Ê½ÔËÐÐÐ­³ÌµÄ¡£
+	   çŽ°åœ¨è¿™ä¸¤ä¸ª Go åç¨‹åœ¨ç‹¬ç«‹çš„ Go åç¨‹ä¸­å¼‚æ­¥çš„è¿è¡Œï¼Œæ‰€ä»¥æˆ‘ä»¬éœ€è¦ç­‰å®ƒä»¬æ‰§è¡Œç»“æŸã€‚è¿™é‡Œçš„ Scanln ä»£ç éœ€è¦æˆ‘ä»¬åœ¨ç¨‹åºé€€å‡ºå‰æŒ‰ä¸‹ä»»æ„é”®ç»“æŸã€‚
+	   å½“æˆ‘ä»¬è¿è¡Œè¿™ä¸ªç¨‹åºæ—¶ï¼Œå°†é¦–å…ˆçœ‹åˆ°é˜»å¡žå¼è°ƒç”¨çš„è¾“å‡ºï¼Œç„¶åŽæ˜¯ä¸¤ä¸ª Go åç¨‹çš„äº¤æ›¿è¾“å‡ºã€‚è¿™ç§äº¤æ›¿çš„æƒ…å†µè¡¨ç¤º Go è¿è¡Œæ—¶æ˜¯ä»¥å¼‚æ­¥çš„æ–¹å¼è¿è¡Œåç¨‹çš„ã€‚
 	*/
 	var input string
 	fmt.Scanln(&input)
